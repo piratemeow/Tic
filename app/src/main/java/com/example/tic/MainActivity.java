@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
             {0,0,0}};
     Button b1,b2,b3,b4,b5,b6,b7,b8,b9,pa;
     TextView txt;
-    EditText left,right;
     int turn = 1;
 
 
@@ -41,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         txt = findViewById(R.id.text3);
-        left = findViewById(R.id.left);
-        right = findViewById(R.id.right);
         pa = findViewById(R.id.pa);
 
         Arrays.fill(b,false);
@@ -109,27 +106,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void result(int val)
     {
-        String s = left.getText().toString();
-        String f = right.getText().toString();
-
-        if (s.isEmpty())
-        {
-            s="X";
-        }
-        if (f.isEmpty())
-        {
-            f = "O";
-        }
         if (val==1)
         {
 
-            txt.setText(s+" has won");
+            txt.setText('X'+" has won");
             turn = -1;
             pa.setVisibility(View.VISIBLE);
         }
         else if (val==-1)
         {
-            txt.setText(f+" has won");
+            txt.setText('Y'+" has won");
             turn = -1;
             pa.setVisibility(View.VISIBLE);
         }
@@ -371,9 +357,5 @@ public class MainActivity extends AppCompatActivity {
         finish();
         startActivity(intent);
     }
-
-
-
-
 
 }
