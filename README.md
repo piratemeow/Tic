@@ -1,2 +1,2 @@
-The first solo android tic-tac-toe game project of mine.
+A tic-tac-toe game app for Android. 
 Created in Android Studio with Java
